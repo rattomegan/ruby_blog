@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!, except: [:indes, :show]
+  before_action :authenticate_user!, except: [:index, :show]
   # this helper method can replace the .find()
   before_action :set_blog_post, except: [:index, :new, :create] # only: [:show, :edit, :update, :destroy]
 
