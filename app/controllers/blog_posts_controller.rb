@@ -6,7 +6,7 @@ class BlogPostsController < ApplicationController
   def index
     # look up all posts and save to an instance variable
     # rails knows to share these with the erb templates
-    @blog_posts = BlogPost.all
+    @blog_posts = user_signed_in? ? BlogPost.sorted : BlogPost.published.sorted
   end
 
   def show
@@ -48,11 +48,11 @@ class BlogPostsController < ApplicationController
   private
 
   def blog_post_params
-    params.require(:blog_post).permit(:title, :body)
+    params.require(:blog_post).permit(:title, :body, :published_at)
   end
 
   def set_blog_post
-    @blog_post = BlogPost.find(params[:id])
+    @blog_post = user_signed_in? ? BlogPost.find(params[:id]) : BlogPost.published.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     # this is a helper method that equates to "/"
     redirect_to root_path
