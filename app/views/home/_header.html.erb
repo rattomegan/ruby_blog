@@ -1,6 +1,6 @@
 <nav class="my-2">
   <ul class="p-0 list-none flex gap-2">
-    <li class="font-bold text-xl p-0">RUBY BLOG</li>
+    <%= link_to "RUBY BLOG", root_path, class: "no-underline" %>
     <% if user_signed_in? %>
       <li class="p-0"><%= link_to "Create New Blog Post", new_blog_post_path, class: "no-underline" %></li>
       <%# <li><%= link_to "Profile", edit_user_registration_path %></li>
