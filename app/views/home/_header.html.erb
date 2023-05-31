@@ -1,15 +1,14 @@
-<nav>
-  <ul class="list-none flex gap-2">
-    <li>LOGO</li>
-    
+<nav class="my-2">
+  <ul class="p-0 list-none flex gap-2">
+    <li class="font-bold text-xl p-0">RUBY BLOG</li>
     <% if user_signed_in? %>
-      <li><%= link_to "Create New Blog Post", new_blog_post_path %></li>
+      <li class="p-0"><%= link_to "Create New Blog Post", new_blog_post_path, class: "no-underline" %></li>
       <%# <li><%= link_to "Profile", edit_user_registration_path %></li>
-      <li><%= button_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <li class="p-0"><%= button_to "Log out", destroy_user_session_path, method: :delete %></li>
     <% else %>
     <%# <%= link_to "Log in", new_user_session_path %> 
     <%# <%= link_to "Sign up", new_user_registration_path %>
-      <li><%= link_to "Admin", new_user_session_path %></li>
+      <li class="p-0"><%= link_to "Admin", new_user_session_path %></li>
     <% end %>
   </ul>
 

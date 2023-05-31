@@ -11,11 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="prose mx-auto">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+  <body>
     <%= render "home/header" %>
-    <%= yield %>
+    <div class="prose mx-auto">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <%= yield %>
+    </div>
+
   </body>
 </html>
