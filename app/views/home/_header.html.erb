@@ -1,10 +1,10 @@
-<nav class="my-2">
-  <ul class="p-0 list-none flex gap-2">
-    <%= link_to "RUBY BLOG", root_path, class: "no-underline" %>
+<nav class="py-2 px-6 flex items-center justify-between">
+  <%= link_to "RUBY NOTES", root_path, class: "text-xl font-bold no-underline inline-block w-20" %>
+  <ul class="flex gap-4">
     <% if user_signed_in? %>
-      <li class="p-0"><%= link_to "Create New Blog Post", new_blog_post_path, class: "no-underline" %></li>
+      <li class="nav-link"><%= link_to "New Post", new_blog_post_path, class: "no-underline" %></li>
       <%# <li><%= link_to "Profile", edit_user_registration_path %></li>
-      <li class="p-0"><%= button_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <li><%= button_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
     <% else %>
     <%# <%= link_to "Log in", new_user_session_path %> 
     <%# <%= link_to "Sign up", new_user_registration_path %>
