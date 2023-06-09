@@ -3,7 +3,7 @@
     <% if form.object.errors.any? %>
       <div>
         <% form.object.errors.full_messages.each do |message| %>
-          <div><%= message %></div>
+          <div class="text-pink-700 font-bold mb-2"><span>**</span><%= message %></div>
         <% end %>
       </div>
     <% end %>

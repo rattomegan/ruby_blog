@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby Notes</title>
+    <title>Learn Rails Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,8 +15,8 @@
   <body class="text-gray-900 flex flex-col min-h-screen justify-between">
     <div class="mx-auto w-full px-4 md:px-12 max-w-7xl">
       <%= render "home/header" %>
-      <p class="notice text-pink-500"><%= notice %></p>
-      <p class="alert text-pink-500"><%= alert %></p>
+      <p class="notice text-pink-600 opacity-0 animate-fade-out"><%= notice %></p>
+      <p class="alert text-pink-600 opacity-0 animate-fade-out"><%= alert %></p>
 
       <%= yield %>
     </div>
