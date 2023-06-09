@@ -23,7 +23,7 @@
     @apply text-2xl font-bold mb-2;
   }
   .form-button {
-    @apply p-2 px-4 w-fit rounded;
+    @apply px-4 w-fit font-bold;
   }
 }
 
