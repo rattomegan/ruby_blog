@@ -13,13 +13,13 @@
   </head>
 
   <body class="text-gray-900">
-    <%= render "home/header" %>
-    <div class="mx-auto w-full px-12 max-w-7xl">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <div class="mx-auto w-full px-4 md:px-12 max-w-7xl">
+      <%= render "home/header" %>
+      <p class="notice text-pink-500"><%= notice %></p>
+      <p class="alert text-pink-500"><%= alert %></p>
 
       <%= yield %>
+      <%= render "home/footer" %>
     </div>
-
   </body>
 </html>

@@ -1,0 +1,10 @@
+<footer class="mt-24 mb-4">
+  <ul class="flex gap-4">
+    <% if !user_signed_in? %>
+      <li class="bg-pink-200 px-2"><%= link_to "ADMIN LOGIN", new_user_session_path %></li>
+    <% end %>
+      <li>
+      <p class="copyright">&#169; Copyright Megan Ratto 2023</p> 
+      </li>
+  </ul>
+</footer>
