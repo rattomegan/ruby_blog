@@ -4,7 +4,7 @@
       <div class="mt-6 lg:mt-12 border-t-2 border-black ">
         <%# you can pass the active record as the path %>
         <% if blog_post.draft? %>
-          <p class="published-label bg-yellow-600 text-white">draft</p>
+          <p class="published-label bg-yellow-500 text-white">draft</p>
         <% elsif blog_post.scheduled? %>
           <p class="published-label bg-pink-600 text-white">scheduled</p>
         <% end %>
