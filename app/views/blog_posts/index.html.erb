@@ -8,7 +8,9 @@
         <% elsif blog_post.scheduled? %>
           <p class="published-label bg-pink-600 text-white">scheduled</p>
         <% end %>
-        <%# <%= blog_post.published_at %>
+        <div class="inline">
+          <%= blog_post.format_date %>
+        </div>
         <%= link_to blog_post.title, blog_post, class: "font-bold no-underline text-4xl hover:underline block pt-2" %>
 
         <div class="h-24 overflow-hidden mt-6"><%= blog_post.content %></div>

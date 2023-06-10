@@ -22,4 +22,8 @@ class BlogPost < ApplicationRecord
   def scheduled?
     published_at? && published_at > Time.current
   end
+
+  def format_date
+    published_at? ? published_at.strftime('%m.%d.%Y') : ''
+  end
 end
