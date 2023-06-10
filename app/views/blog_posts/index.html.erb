@@ -1,15 +1,18 @@
 <div class="flex justify-center">
   <div class="max-w-3xl">
     <% @blog_posts.each do |blog_post| %>
-      <div class="mt-6 lg:mt-12">
+      <div class="mt-6 lg:mt-12 border-t-2 border-black ">
         <%# you can pass the active record as the path %>
-        <%= link_to blog_post.title, blog_post, class: "font-bold no-underline text-4xl hover:underline" %>
-          <% if blog_post.draft? %>
-            <div class="published-label bg-gray-100">draft</div>
-          <% elsif blog_post.scheduled? %>
-            <div class="published-label bg-blue-100 text-blue-900">scheduled</div>
-          <% end %>
+        <% if blog_post.draft? %>
+          <p class="published-label bg-yellow-600 text-white">draft</p>
+        <% elsif blog_post.scheduled? %>
+          <p class="published-label bg-pink-600 text-white">scheduled</p>
+        <% end %>
+        <%# <%= blog_post.published_at %>
+        <%= link_to blog_post.title, blog_post, class: "font-bold no-underline text-4xl hover:underline block pt-2" %>
+
         <div class="h-24 overflow-hidden mt-6"><%= blog_post.content %></div>
+
         <%= link_to "READ FULL POST...", blog_post, class: "no-underline italic inline-block mt-2 hover:bg-pink-100" %>
       </div>
     <% end %>
