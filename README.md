@@ -1,24 +1,7 @@
-# README
+# Ruby on Rails Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Ruby on Rails CRUD app with admin authentication. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To login view full CRUD in admin role:
+email: email@email.com
+passsword: password
