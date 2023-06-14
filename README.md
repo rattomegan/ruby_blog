@@ -2,7 +2,7 @@
 
 This is a basic Ruby on Rails CRUD app with admin authentication with Devise and styling with Tailwind.
 
-[Click here to view the app!](https://ruby-blog-iypr.onrender.com/)
+[Click here to view the app live.](https://ruby-blog-iypr.onrender.com/)
 
 To login view full CRUD in admin role:
 email: email@email.com
